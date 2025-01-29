@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script src="bmi.js"></script>
+        <title>BMI Calculator</title>
+    </head>
+    <body>
+        <div class="body-container">
+            <div class="container">
+                <h1>BMI Calculator</h1>
+                <div id="input"></div>
+                <form action="">
+                    <label for="age">Age: </label>
+                    <input type="number" id="age" placeholder="Enter age"><br>
+                    <label for="height">Height: </label>
+                    <input type="number" id="height" placeholder="Enter height in cm"><br>
+                    <label for="weight">Weight: </label>
+                    <input type="number" id="weight" placeholder="Enter weight in kg">
+                    <br>
+                    <button type="button" id="btn" onclick="calculateBMI()">Calculate</button>
+                </form>
+                <div id="output">
+                    <p id="error"></p>
+                    <p id="result"></p>
+                    <p id="comment"></p>
+                    <button type="button" id="graphBtn" onclick="checkGraph()" style="display: none;">Check BMI Graph</button>
+                </div>
+
+                <div id="graph"></div>
+            </div>
+            <div id="graph"></div>
+        </div>
+        <script>
+            function checkGraph() {
+                document.getElementById("graph").innerHTML = "<img src='https://d26tpo4cm8sb6k.cloudfront.net/img/bmi-chart.gif' alt='BMI Graph'>";
+            }   
+            onload = function() {
+                document.getElementById("input").innerHTML = "<p>Enter your age, height and weight to calculate your BMI.</p>";
+            }      
+        </script>
+    </body>
